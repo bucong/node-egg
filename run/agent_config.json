@@ -7,13 +7,15 @@
       "encrypt": true
     },
     "security": {
-      "domainWhiteList": [],
+      "domainWhiteList": [
+        "http://localhost:8088"
+      ],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
-        "enable": true,
+        "enable": false,
         "useSession": false,
-        "ignoreJSON": false,
+        "ignoreJSON": true,
         "cookieName": "csrfToken",
         "sessionName": "csrfToken",
         "headerName": "x-csrf-token",
@@ -73,7 +75,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/GitHub/egg/node_modules/egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "/GitHub/node-egg/node_modules/egg-onerror/lib/onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -85,8 +87,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/GitHub/egg/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/GitHub/egg/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/GitHub/node-egg/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/GitHub/node-egg/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "multipart": {
@@ -110,7 +112,7 @@
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "/GitHub/egg/logs/egg/egg-schedule.log"
+        "file": "/GitHub/node-egg/logs/egg/egg-schedule.log"
       }
     },
     "logrotator": {
@@ -124,18 +126,40 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/GitHub/egg/app/public",
+      "dir": "/GitHub/node-egg/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "/GitHub/egg/app/view",
+      "root": "/GitHub/node-egg/app/view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
-      "mapping": {}
+      "mapping": {
+        ".html": "ejs"
+      }
+    },
+    "ejs": {
+      "root": "/GitHub/node-egg/app/view",
+      "cache": false,
+      "debug": false,
+      "compileDebug": true,
+      "delimiter": null,
+      "strict": false
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
+    "mysql": {
+      "default": {
+        "database": null,
+        "connectionLimit": 5
+      },
+      "app": true,
+      "agent": false
     },
     "env": "local",
     "name": "egg",
@@ -151,7 +175,10 @@
       "private": true,
       "dependencies": {
         "egg": "^2.2.1",
-        "egg-scripts": "^2.5.0"
+        "egg-cors": "^2.1.1",
+        "egg-mysql": "^3.0.0",
+        "egg-scripts": "^2.5.0",
+        "egg-view-ejs": "^2.0.0"
       },
       "devDependencies": {
         "autod": "^3.0.1",
@@ -188,9 +215,9 @@
       "author": "bucong",
       "license": "MIT"
     },
-    "baseDir": "/GitHub/egg",
+    "baseDir": "/GitHub/node-egg",
     "HOME": "/Users/g",
-    "rundir": "/GitHub/egg/run",
+    "rundir": "/GitHub/node-egg/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -220,7 +247,7 @@
       }
     },
     "logger": {
-      "dir": "/GitHub/egg/logs/egg",
+      "dir": "/GitHub/node-egg/logs/egg",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -273,8 +300,8 @@
     "cluster": {
       "listen": {
         "path": "",
-        "port": 7001,
-        "hostname": ""
+        "port": 3000,
+        "hostname": "0.0.0.0"
       }
     },
     "clusterClient": {
@@ -295,8 +322,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-session",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -308,8 +335,8 @@
         "session"
       ],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-security",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-security",
       "version": "2.4.0"
     },
     "jsonp": {
@@ -321,8 +348,8 @@
         "security"
       ],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-jsonp",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -334,8 +361,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-onerror",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -345,8 +372,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-i18n",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-i18n",
       "version": "2.0.0"
     },
     "watcher": {
@@ -356,8 +383,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-watcher",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-watcher",
       "version": "3.0.0"
     },
     "multipart": {
@@ -367,8 +394,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-multipart",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-multipart",
       "version": "2.1.0"
     },
     "development": {
@@ -382,8 +409,8 @@
       "env": [
         "local"
       ],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-development",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-development",
       "version": "2.4.1"
     },
     "schedule": {
@@ -393,8 +420,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-schedule",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-schedule",
       "version": "3.4.0"
     },
     "logrotator": {
@@ -406,8 +433,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-logrotator",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-logrotator",
       "version": "3.0.3"
     },
     "static": {
@@ -417,8 +444,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-static",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-static",
       "version": "2.1.1"
     },
     "view": {
@@ -428,9 +455,44 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/GitHub/egg/node_modules/egg/config/plugin.js",
-      "path": "/GitHub/egg/node_modules/egg-view",
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-view",
       "version": "2.1.0"
+    },
+    "ejs": {
+      "enable": true,
+      "package": "egg-view-ejs",
+      "name": "ejs",
+      "dependencies": [
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/GitHub/node-egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-view-ejs",
+      "version": "2.0.0"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/GitHub/node-egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-cors",
+      "version": "2.1.1"
+    },
+    "mysql": {
+      "enable": true,
+      "package": "egg-mysql",
+      "name": "mysql",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/GitHub/node-egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-mysql",
+      "version": "3.0.0"
     }
   }
 }

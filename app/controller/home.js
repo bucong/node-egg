@@ -4,7 +4,10 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'hi, egg';
+    let title = "我是首页内容";
+    await this.ctx.render('index',{
+      title: title
+    });
   }
 }
 

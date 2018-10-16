@@ -1,274 +1,299 @@
 {
-  "keys": "/GitHub/egg/config/config.default.js",
-  "middleware": "/GitHub/egg/config/config.default.js",
-  "session": {
-    "maxAge": "/GitHub/egg/node_modules/egg-session/config/config.default.js",
-    "key": "/GitHub/egg/node_modules/egg-session/config/config.default.js",
-    "httpOnly": "/GitHub/egg/node_modules/egg-session/config/config.default.js",
-    "encrypt": "/GitHub/egg/node_modules/egg-session/config/config.default.js"
+  "keys": "/GitHub/node-egg/config/config.default.js",
+  "middleware": "/GitHub/node-egg/config/config.default.js",
+  "view": {
+    "mapping": {
+      ".html": "/GitHub/node-egg/config/config.default.js"
+    },
+    "root": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js",
+    "cache": "/GitHub/node-egg/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js"
   },
-  "security": {
-    "domainWhiteList": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-    "protocolWhiteList": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-    "defaultMiddleware": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-    "csrf": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "useSession": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "ignoreJSON": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "cookieName": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "sessionName": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "headerName": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "bodyName": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "queryName": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "xframe": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "value": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "hsts": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.local.js",
-      "maxAge": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "includeSubdomains": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "dta": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "methodnoallow": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "noopen": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "nosniff": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "referrerPolicy": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "value": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "xssProtection": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "value": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "csp": {
-      "enable": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "policy": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
-    },
-    "ssrf": {
-      "ipBlackList": "/GitHub/egg/node_modules/egg-security/config/config.default.js",
-      "checkAddress": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
+  "cluster": {
+    "listen": {
+      "path": "/GitHub/node-egg/config/config.default.js",
+      "port": "/GitHub/node-egg/config/config.default.js",
+      "hostname": "/GitHub/node-egg/config/config.default.js"
     }
   },
+  "security": {
+    "csrf": {
+      "enable": "/GitHub/node-egg/config/config.default.js",
+      "ignoreJSON": "/GitHub/node-egg/config/config.default.js",
+      "useSession": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "headerName": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "queryName": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/GitHub/node-egg/config/config.default.js",
+    "protocolWhiteList": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "value": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "policy": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/GitHub/node-egg/config/config.default.js",
+    "allowMethods": "/GitHub/node-egg/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
+    "key": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js"
+  },
   "helper": {
-    "shtml": "/GitHub/egg/node_modules/egg-security/config/config.default.js"
+    "shtml": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
   },
   "jsonp": {
-    "limit": "/GitHub/egg/node_modules/egg-jsonp/config/config.default.js",
-    "callback": "/GitHub/egg/node_modules/egg-jsonp/config/config.default.js",
-    "csrf": "/GitHub/egg/node_modules/egg-jsonp/config/config.default.js"
+    "limit": "/GitHub/node-egg/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/GitHub/node-egg/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/GitHub/node-egg/node_modules/egg-jsonp/config/config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "/GitHub/egg/node_modules/egg-onerror/config/config.default.js",
-    "appErrorFilter": "/GitHub/egg/node_modules/egg-onerror/config/config.default.js",
-    "templatePath": "/GitHub/egg/node_modules/egg-onerror/config/config.default.js"
+    "errorPageUrl": "/GitHub/node-egg/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/GitHub/node-egg/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/GitHub/node-egg/node_modules/egg-onerror/config/config.default.js"
   },
   "i18n": {
-    "defaultLocale": "/GitHub/egg/node_modules/egg-i18n/config/config.default.js",
-    "dirs": "/GitHub/egg/node_modules/egg-i18n/config/config.default.js",
-    "queryField": "/GitHub/egg/node_modules/egg-i18n/config/config.default.js",
-    "cookieField": "/GitHub/egg/node_modules/egg-i18n/config/config.default.js",
-    "cookieMaxAge": "/GitHub/egg/node_modules/egg-i18n/config/config.default.js"
+    "defaultLocale": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js"
   },
   "watcher": {
-    "type": "/GitHub/egg/node_modules/egg-watcher/config/config.local.js",
+    "type": "/GitHub/node-egg/node_modules/egg-watcher/config/config.local.js",
     "eventSources": {
-      "default": "/GitHub/egg/node_modules/egg-watcher/config/config.default.js",
-      "development": "/GitHub/egg/node_modules/egg-watcher/config/config.default.js"
+      "default": "/GitHub/node-egg/node_modules/egg-watcher/config/config.default.js",
+      "development": "/GitHub/node-egg/node_modules/egg-watcher/config/config.default.js"
     }
   },
   "multipart": {
-    "autoFields": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "defaultCharset": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "fieldNameSize": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "fieldSize": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "fields": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "fileSize": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "files": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "fileExtensions": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js",
-    "whitelist": "/GitHub/egg/node_modules/egg-multipart/config/config.default.js"
+    "autoFields": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "files": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js"
   },
   "development": {
-    "watchDirs": "/GitHub/egg/node_modules/egg-development/config/config.default.js",
-    "ignoreDirs": "/GitHub/egg/node_modules/egg-development/config/config.default.js",
-    "fastReady": "/GitHub/egg/node_modules/egg-development/config/config.default.js",
-    "reloadOnDebug": "/GitHub/egg/node_modules/egg-development/config/config.default.js",
-    "overrideDefault": "/GitHub/egg/node_modules/egg-development/config/config.default.js"
+    "watchDirs": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js"
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "/GitHub/egg/node_modules/egg-schedule/config/config.default.js",
-      "file": "/GitHub/egg/node_modules/egg-schedule/config/config.default.js"
+      "consoleLevel": "/GitHub/node-egg/node_modules/egg-schedule/config/config.default.js",
+      "file": "/GitHub/node-egg/node_modules/egg-schedule/config/config.default.js"
     }
   },
   "logrotator": {
-    "filesRotateByHour": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "hourDelimiter": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "filesRotateBySize": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxFileSize": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxFiles": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "rotateDuration": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxDays": "/GitHub/egg/node_modules/egg-logrotator/config/config.default.js"
+    "filesRotateByHour": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js"
   },
   "static": {
-    "prefix": "/GitHub/egg/node_modules/egg-static/config/config.default.js",
-    "dir": "/GitHub/egg/node_modules/egg-static/config/config.default.js",
-    "dynamic": "/GitHub/egg/node_modules/egg-static/config/config.default.js",
-    "preload": "/GitHub/egg/node_modules/egg-static/config/config.default.js",
-    "buffer": "/GitHub/egg/node_modules/egg-static/config/config.default.js",
-    "maxFiles": "/GitHub/egg/node_modules/egg-static/config/config.default.js"
+    "prefix": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "dir": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "preload": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "buffer": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js"
   },
-  "view": {
-    "root": "/GitHub/egg/node_modules/egg-view/config/config.default.js",
-    "cache": "/GitHub/egg/node_modules/egg-view/config/config.local.js",
-    "defaultExtension": "/GitHub/egg/node_modules/egg-view/config/config.default.js",
-    "defaultViewEngine": "/GitHub/egg/node_modules/egg-view/config/config.default.js",
-    "mapping": "/GitHub/egg/node_modules/egg-view/config/config.default.js"
+  "ejs": {
+    "root": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
+    "cache": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.local.js",
+    "debug": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
+    "compileDebug": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
+    "delimiter": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
+    "strict": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js"
   },
-  "env": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "name": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "proxy": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "protocolHeaders": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "ipHeaders": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "hostHeaders": "/GitHub/egg/node_modules/egg/config/config.default.js",
+  "mysql": {
+    "default": {
+      "database": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
+    },
+    "app": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js",
+    "agent": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
+  },
+  "env": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "name": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "proxy": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
   "pkg": {
-    "name": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "version": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "description": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "private": "/GitHub/egg/node_modules/egg/config/config.default.js",
+    "name": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "version": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "description": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "private": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "dependencies": {
-      "egg": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "egg-scripts": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "egg": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-cors": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-view-ejs": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
-      "autod": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "autod-egg": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "egg-bin": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "egg-ci": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "egg-mock": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "eslint": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "eslint-config-egg": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "webstorm-disable-index": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "autod": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "autod-egg": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-bin": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-ci": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "egg-mock": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "eslint": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "webstorm-disable-index": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "engines": {
-      "node": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "node": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "scripts": {
-      "start": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "stop": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "dev": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "debug": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "test": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "test-local": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "cov": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "lint": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "ci": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "autod": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "start": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "stop": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "dev": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "debug": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "test": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "test-local": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "cov": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "lint": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "ci": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "autod": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "ci": {
-      "version": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "version": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "repository": {
-      "type": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "url": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "type": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "url": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
-    "author": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "license": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "author": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "license": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
-  "baseDir": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "HOME": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "rundir": "/GitHub/egg/node_modules/egg/config/config.default.js",
+  "baseDir": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "HOME": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "rundir": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
   "dump": {
-    "ignore": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "ignore": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "notFound": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "sitefile": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "middlewares": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "httpClient": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "bodyparser": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "notFound": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "sitefile": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "middlewares": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "httpClient": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "notfound": {
-    "pageUrl": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "pageUrl": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "/favicon.ico": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "bodyParser": {
-    "enable": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "encoding": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "formLimit": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "jsonLimit": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "strict": "/GitHub/egg/node_modules/egg/config/config.default.js",
+    "enable": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "encoding": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "formLimit": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "strict": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "queryString": {
-      "arrayLimit": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "depth": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "parameterLimit": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "arrayLimit": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "depth": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     }
   },
   "logger": {
-    "dir": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "encoding": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "env": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "level": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "consoleLevel": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "disableConsoleAfterReady": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "outputJSON": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "buffer": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "appLogName": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "coreLogName": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "agentLogName": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "errorLogName": "/GitHub/egg/node_modules/egg/config/config.default.js",
+    "dir": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "encoding": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "env": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "level": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "outputJSON": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "buffer": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "appLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "coreLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "agentLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "errorLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "coreLogger": {
-      "consoleLevel": "/GitHub/egg/node_modules/egg/config/config.local.js"
+      "consoleLevel": "/GitHub/node-egg/node_modules/egg/config/config.local.js"
     },
-    "allowDebugAtProd": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "allowDebugAtProd": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "dnsCacheMaxLength": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "dnsCacheMaxAge": "/GitHub/egg/node_modules/egg/config/config.default.js",
+    "enableDNSCache": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxAge": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "request": {
-      "timeout": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "timeout": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "freeSocketKeepAliveTimeout": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "maxSockets": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "maxFreeSockets": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "keepAlive": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "maxSockets": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "freeSocketKeepAliveTimeout": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "maxSockets": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "maxFreeSockets": "/GitHub/egg/node_modules/egg/config/config.default.js"
+      "keepAlive": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "maxSockets": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     }
   },
   "meta": {
-    "enable": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "logging": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "enable": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "logging": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
-  "coreMiddleware": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "workerStartTimeout": "/GitHub/egg/node_modules/egg/config/config.default.js",
-  "cluster": {
-    "listen": {
-      "path": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "port": "/GitHub/egg/node_modules/egg/config/config.default.js",
-      "hostname": "/GitHub/egg/node_modules/egg/config/config.default.js"
-    }
-  },
+  "coreMiddleware": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
   "clusterClient": {
-    "maxWaitTime": "/GitHub/egg/node_modules/egg/config/config.default.js",
-    "responseTimeout": "/GitHub/egg/node_modules/egg/config/config.default.js"
+    "maxWaitTime": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
-  "onClientError": "/GitHub/egg/node_modules/egg/config/config.default.js"
+  "onClientError": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
 }
