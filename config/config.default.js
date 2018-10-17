@@ -29,7 +29,7 @@ module.exports = appInfo => {
       enable: false,
       ignoreJSON: true
     },
-    domainWhiteList: ['http://localhost:8088']
+    domainWhiteList: ['http://localhost:8088', 'http://office.zrpic.com']
   };
   
   config.cors = {
@@ -50,7 +50,7 @@ module.exports = appInfo => {
       // 密码
       password: 'Bucong0934',
       // 数据库名
-      database: 'koa2',
+      database: 'egg',
     },
     // 是否加载到 app 上，默认开启
     app: true,

@@ -159,7 +159,14 @@
         "connectionLimit": 5
       },
       "app": true,
-      "agent": false
+      "agent": false,
+      "client": {
+        "host": "localhost",
+        "port": "3306",
+        "user": "root",
+        "password": "<String len: 10>",
+        "database": "egg"
+      }
     },
     "env": "local",
     "name": "egg",

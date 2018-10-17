@@ -73,6 +73,21 @@
     "origin": "/GitHub/node-egg/config/config.default.js",
     "allowMethods": "/GitHub/node-egg/config/config.default.js"
   },
+  "mysql": {
+    "client": {
+      "host": "/GitHub/node-egg/config/config.default.js",
+      "port": "/GitHub/node-egg/config/config.default.js",
+      "user": "/GitHub/node-egg/config/config.default.js",
+      "password": "/GitHub/node-egg/config/config.default.js",
+      "database": "/GitHub/node-egg/config/config.default.js"
+    },
+    "app": "/GitHub/node-egg/config/config.default.js",
+    "agent": "/GitHub/node-egg/config/config.default.js",
+    "default": {
+      "database": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
   "session": {
     "maxAge": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
     "key": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
@@ -154,14 +169,6 @@
     "compileDebug": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
     "delimiter": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
     "strict": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js"
-  },
-  "mysql": {
-    "default": {
-      "database": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js",
-      "connectionLimit": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
-    },
-    "app": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js",
-    "agent": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
   },
   "env": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
   "name": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
