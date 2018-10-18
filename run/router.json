@@ -19,6 +19,19 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/user/login",
+    "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/api/commodity/list",
     "regexp": "/^\\/api\\/commodity\\/list(?:\\/(?=$))?$/",
     "stack": [
@@ -32,8 +45,20 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/user/login",
-    "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
+    "path": "/api/commodity/info",
+    "regexp": "/^\\/api\\/commodity\\/info(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/commodity/add",
+    "regexp": "/^\\/api\\/commodity\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

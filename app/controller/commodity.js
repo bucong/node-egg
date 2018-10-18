@@ -11,6 +11,22 @@ class CommodityController extends Controller {
       msg: ''
     }
   }
+  async add() {
+    let query = this.ctx.request.body;
+    console.log(query);
+    let res = await this.service.commodity.add(query);
+    this.ctx.body = res;
+  }
+  async info() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.commodity.info(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
 }
 
 module.exports = CommodityController;
