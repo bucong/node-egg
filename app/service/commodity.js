@@ -46,6 +46,15 @@ class CommodityService extends Service {
         cId: query.id
       }
     });
+    for(let item of resultEvaluate){
+      let resultUser = await db.select('user',{
+        where: {
+          id: item.userId
+        }
+      });
+      item.userName = resultUser[0].name;
+      item.figureurl = resultUser[0].figureurl;
+    }
     return {
       info: resultInfo[0],
       evaluate: resultEvaluate

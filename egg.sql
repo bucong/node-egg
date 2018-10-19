@@ -11,7 +11,7 @@
  Target Server Version : 50641
  File Encoding         : 65001
 
- Date: 18/10/2018 17:50:25
+ Date: 19/10/2018 17:20:41
 */
 
 SET NAMES utf8mb4;
@@ -71,8 +71,6 @@ CREATE TABLE `evaluate` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
   `cId` int(6) DEFAULT NULL,
   `userId` int(6) DEFAULT NULL,
-  `userName` varchar(20) DEFAULT NULL,
-  `userFigure` varchar(200) DEFAULT NULL,
   `content` varchar(255) DEFAULT NULL,
   `imgs` longtext,
   `times` varchar(20) DEFAULT NULL,
@@ -83,8 +81,8 @@ CREATE TABLE `evaluate` (
 -- Records of evaluate
 -- ----------------------------
 BEGIN;
-INSERT INTO `evaluate` VALUES (1, 1, 3, '时间ю说了真话∮', 'http://qzapp.qlogo.cn/qzapp/101479867/2807A306B0445956F956F2E29815E0B9/30', '米饭不错，不干', NULL, '1539853345362');
-INSERT INTO `evaluate` VALUES (2, 1, 3, '时间ю说了真话∮', 'http://qzapp.qlogo.cn/qzapp/101479867/2807A306B0445956F956F2E29815E0B9/30', '米饭不错，不干', NULL, '1539853345362');
+INSERT INTO `evaluate` VALUES (1, 1, 3, '米饭不错，不干', NULL, '1539853345362');
+INSERT INTO `evaluate` VALUES (2, 2, 5, '苏北大米，就是好吃', NULL, '1539953549362');
 COMMIT;
 
 -- ----------------------------
@@ -113,13 +111,14 @@ CREATE TABLE `user` (
   `figureurl` varchar(100) DEFAULT NULL,
   `phone` varchar(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 BEGIN;
 INSERT INTO `user` VALUES (3, '2807A306B0445956F956F2E29815E0B9', NULL, '时间ю说了真话∮', 'http://qzapp.qlogo.cn/qzapp/101479867/2807A306B0445956F956F2E29815E0B9/30', NULL);
+INSERT INTO `user` VALUES (5, '9B6C01E2ACF80B2D8307FD8125AFDAA7', NULL, '★不求※甚解', 'http://qzapp.qlogo.cn/qzapp/101479867/9B6C01E2ACF80B2D8307FD8125AFDAA7/30', NULL);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
