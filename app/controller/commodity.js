@@ -27,6 +27,34 @@ class CommodityController extends Controller {
       msg: ''
     }
   }
+  async evaluate() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.commodity.evaluate(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
+  async update() {
+    let query = this.ctx.request.body;
+    console.log(query);
+    let res = await this.service.commodity.update(query);
+    this.ctx.body = res;
+  } 
+  async delete() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.commodity.delete(query);
+    this.ctx.body = res;
+  } 
+  async evaluateSub() {
+    let query = this.ctx.request.body;
+    console.log(query);
+    let res = await this.service.commodity.evaluateSub(query);
+    this.ctx.body = res;
+  } 
 }
 
 module.exports = CommodityController;

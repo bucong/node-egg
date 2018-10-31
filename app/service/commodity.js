@@ -36,17 +36,21 @@ class CommodityService extends Service {
   }
   async info(query) {
     let db = this.app.mysql;
-    let resultInfo = await db.select('commodity',{
+    let result = await db.select('commodity',{
       where: {
         id: query.id
       }
     });
-    let resultEvaluate = await db.select('evaluate',{
+    return result[0];
+  }
+  async evaluate(query) {
+    let db = this.app.mysql;
+    let result = await db.select('evaluate',{
       where: {
         cId: query.id
       }
     });
-    for(let item of resultEvaluate){
+    for(let item of result){
       let resultUser = await db.select('user',{
         where: {
           id: item.userId
@@ -55,10 +59,83 @@ class CommodityService extends Service {
       item.userName = resultUser[0].name;
       item.figureurl = resultUser[0].figureurl;
     }
-    return {
-      info: resultInfo[0],
-      evaluate: resultEvaluate
-    }  
+    return result;
+  }
+  async update(query) {
+    let db = this.app.mysql;
+    let result = await db.update('commodity', {
+      type: query.type,
+      name: query.name,
+      price: query.price,
+      img: query.img,
+      desc: query.desc,
+      discount: query.discount
+    }, {
+      where: {
+        id: query.id
+      }
+    });
+    if(result.affectedRows === 1){
+      return {
+        code: 0,
+        data: {
+          info: '修改成功'
+        },
+        msg: ''
+      }
+    }else{
+      return {
+        code: 5,
+        data: {},
+        msg: '修改失败'
+      }
+    }
+  }
+  async delete(query) {
+    let db = this.app.mysql;
+    let result = await db.delete('commodity', {
+      id: query.id
+    });
+    if(result.affectedRows === 1){
+      return {
+        code: 0,
+        data: {
+          info: '删除成功'
+        },
+        msg: ''
+      }
+    }else{
+      return {
+        code: 5,
+        data: {},
+        msg: '删除失败'
+      }
+    }
+  }
+  async evaluateSub(query) {
+    let db = this.app.mysql;
+    let result = await db.insert('evaluate', {
+      cId: query.cId,
+      userId: query.userId,
+      content: query.content,
+      imgs: query.imgs,
+      times: query.times
+    });
+    if(result.affectedRows === 1){
+      return {
+        code: 0,
+        data: {
+          info: '提交成功'
+        },
+        msg: ''
+      }
+    }else{
+      return {
+        code: 5,
+        data: {},
+        msg: '提交失败'
+      }
+    }
   }
 }
 

@@ -3,9 +3,6 @@
 const Controller = require('egg').Controller;
 
 class AdminController extends Controller {
-  async index() {
-
-  }
   async login() {
     let query = this.ctx.request.body;
     console.log(query);
