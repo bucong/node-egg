@@ -47,21 +47,6 @@ class CommodityService extends Service {
     let db = this.app.mysql;
 
     let result = await db.query('select evaluate.*, user.name, user.figureurl from evaluate left join user on evaluate.userId = user.id where cId = ?', [query.id]);
-
-    // let result = await db.select('evaluate',{
-    //   where: {
-    //     cId: query.id
-    //   }
-    // });
-    // for(let item of result){
-    //   let resultUser = await db.select('user',{
-    //     where: {
-    //       id: item.userId
-    //     }
-    //   });
-    //   item.userName = resultUser[0].name;
-    //   item.figureurl = resultUser[0].figureurl;
-    // }
     return result;
   }
   async update(query) {
@@ -132,6 +117,10 @@ class CommodityService extends Service {
         id: query.orderId
       }
     });
+    //评分大于3分，则点赞
+    if(query.star > 3){
+      await db.query('update commodity set praise = praise + 1 where id = ?', [query.cId]);
+    }
     if(result.affectedRows === 1 && orderResult.affectedRows === 1){
       return {
         code: 0,
