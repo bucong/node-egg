@@ -6,6 +6,8 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index); //首页
+  //上传图片
+  router.post('/api/upload/img', controller.home.uploadImg);
   //前端页面
   router.get('/api/user/login', controller.user.userLogin);
   //菜品信息

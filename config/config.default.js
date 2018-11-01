@@ -29,11 +29,11 @@ module.exports = appInfo => {
       enable: false,
       ignoreJSON: true
     },
-    domainWhiteList: ['http://localhost:8088', 'http://office.zrpic.com']
+    domainWhiteList: ['http://localhost:8088', 'http://localhost:7456'], //白名单
   };
   
   config.cors = {
-    origin:'*',
+    // origin: '*', //允许所有跨域访问，关闭则允许白名单访问
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
   

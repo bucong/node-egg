@@ -70,7 +70,6 @@
     }
   },
   "cors": {
-    "origin": "/GitHub/node-egg/config/config.default.js",
     "allowMethods": "/GitHub/node-egg/config/config.default.js"
   },
   "mysql": {
@@ -182,11 +181,13 @@
     "description": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "private": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "dependencies": {
+      "await-stream-ready": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg-cors": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg-mysql": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg-scripts": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
-      "egg-view-ejs": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
+      "egg-view-ejs": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "stream-wormhole": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
       "autod": "/GitHub/node-egg/node_modules/egg/config/config.default.js",

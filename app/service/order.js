@@ -6,10 +6,10 @@ class OrderService extends Service {
   async list(query) {
     let db = this.app.mysql;
     let where = {};
-    if(query.state !== ''){
+    if(query.state && query.state !== ''){
       where.state = query.state
     }
-    if(query.store !== ''){
+    if(query.store && query.store !== ''){
       where.store = query.store
     }
     let result = await db.select('order', {
@@ -17,6 +17,8 @@ class OrderService extends Service {
       orders: [
         ['id', 'desc']
       ],
+      limit: 20, //查询条数
+      offset: (query.page - 1) * 20
     });
     return result;
   }

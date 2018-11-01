@@ -11,7 +11,7 @@
  Target Server Version : 50641
  File Encoding         : 65001
 
- Date: 31/10/2018 17:50:36
+ Date: 01/11/2018 15:27:50
 */
 
 SET NAMES utf8mb4;
@@ -76,7 +76,7 @@ CREATE TABLE `evaluate` (
   `times` varchar(20) DEFAULT NULL,
   `star` int(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of evaluate
@@ -84,6 +84,9 @@ CREATE TABLE `evaluate` (
 BEGIN;
 INSERT INTO `evaluate` VALUES (1, 1, 3, '米饭不错，不干', NULL, '1539853345362', 5);
 INSERT INTO `evaluate` VALUES (2, 2, 5, '苏北大米，就是好吃', NULL, '1539953549362', 5);
+INSERT INTO `evaluate` VALUES (3, 1, 5, '米饭的很好，呦西', '', '1539953549362', 4);
+INSERT INTO `evaluate` VALUES (4, 3, 3, '正宗小龙虾，绝对美味', 'oyl3p0elckd1541055565782.png,bi323tg8zww1541055569922.png,fb27v4tt8vs1541055574494.png', '1541050464522', 4);
+INSERT INTO `evaluate` VALUES (8, 4, 3, '皮皮虾，我们走', 'oyl3p0elckd1541055565782.png,bi323tg8zww1541055569922.png,fb27v4tt8vs1541055574494.png', '1541055583129', 5);
 COMMIT;
 
 -- ----------------------------
@@ -107,8 +110,8 @@ CREATE TABLE `order` (
 BEGIN;
 INSERT INTO `order` VALUES (5, 3, '1540948544832', 3, '[{\"id\":2,\"num\":1},{\"id\":3,\"num\":1}]', '74.4', '上海大学店');
 INSERT INTO `order` VALUES (9, 3, '1540950478288', 3, '[{\"id\":1,\"num\":1},{\"id\":2,\"num\":1},{\"id\":3,\"num\":1},{\"id\":4,\"num\":1}]', '130.4', '人民广场店');
-INSERT INTO `order` VALUES (10, 3, '1540950952784', 4, '[{\"id\":4,\"num\":1}]', '54', '虹桥店');
-INSERT INTO `order` VALUES (11, 3, '1540975595420', 4, '[{\"id\":3,\"num\":2}]', '104', '人民广场店');
+INSERT INTO `order` VALUES (10, 3, '1540950952784', 5, '[{\"id\":4,\"num\":1}]', '54', '虹桥店');
+INSERT INTO `order` VALUES (11, 3, '1540975595420', 5, '[{\"id\":3,\"num\":2}]', '104', '人民广场店');
 COMMIT;
 
 -- ----------------------------

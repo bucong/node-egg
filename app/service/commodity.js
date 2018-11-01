@@ -45,20 +45,23 @@ class CommodityService extends Service {
   }
   async evaluate(query) {
     let db = this.app.mysql;
-    let result = await db.select('evaluate',{
-      where: {
-        cId: query.id
-      }
-    });
-    for(let item of result){
-      let resultUser = await db.select('user',{
-        where: {
-          id: item.userId
-        }
-      });
-      item.userName = resultUser[0].name;
-      item.figureurl = resultUser[0].figureurl;
-    }
+
+    let result = await db.query('select evaluate.*, user.name, user.figureurl from evaluate left join user on evaluate.userId = user.id where cId = ?', [query.id]);
+
+    // let result = await db.select('evaluate',{
+    //   where: {
+    //     cId: query.id
+    //   }
+    // });
+    // for(let item of result){
+    //   let resultUser = await db.select('user',{
+    //     where: {
+    //       id: item.userId
+    //     }
+    //   });
+    //   item.userName = resultUser[0].name;
+    //   item.figureurl = resultUser[0].figureurl;
+    // }
     return result;
   }
   async update(query) {
@@ -119,9 +122,17 @@ class CommodityService extends Service {
       userId: query.userId,
       content: query.content,
       imgs: query.imgs,
+      star: query.star,
       times: query.times
     });
-    if(result.affectedRows === 1){
+    let orderResult = await db.update('order', {
+      state: 5
+    }, {
+      where: {
+        id: query.orderId
+      }
+    });
+    if(result.affectedRows === 1 && orderResult.affectedRows === 1){
       return {
         code: 0,
         data: {
