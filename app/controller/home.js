@@ -35,6 +35,36 @@ class HomeController extends Controller {
       msg: ''
     };
   }
+  async imgList() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.home.imgList(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
+  async imgSet() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.home.imgSet(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
+  async imgMoveSort() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.home.imgMoveSort(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
 }
 
 module.exports = HomeController;

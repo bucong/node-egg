@@ -31,6 +31,45 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/img/list",
+    "regexp": "/^\\/api\\/img\\/list(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/img/set",
+    "regexp": "/^\\/api\\/img\\/set(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/img/moveSort",
+    "regexp": "/^\\/api\\/img\\/moveSort(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/api/user/login",
     "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
     "stack": [
@@ -199,6 +238,19 @@
     "paramNames": [],
     "path": "/api/order/finish",
     "regexp": "/^\\/api\\/order\\/finish(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/order/delete",
+    "regexp": "/^\\/api\\/order\\/delete(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

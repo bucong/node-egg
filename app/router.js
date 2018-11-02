@@ -8,6 +8,9 @@ module.exports = app => {
   router.get('/', controller.home.index); //首页
   //上传图片
   router.post('/api/upload/img', controller.home.uploadImg);
+  router.get('/api/img/list', controller.home.imgList);
+  router.get('/api/img/set', controller.home.imgSet);
+  router.get('/api/img/moveSort', controller.home.imgMoveSort);
   //前端页面
   router.get('/api/user/login', controller.user.userLogin);
   //菜品信息
@@ -25,6 +28,7 @@ module.exports = app => {
   router.get('/api/order/accept', controller.order.accept);
   router.get('/api/order/cancel', controller.order.cancel);
   router.get('/api/order/finish', controller.order.finish);
+  router.get('/api/order/delete', controller.order.delete);
   //评论
   router.post('/api/commodity/evaluateSub', controller.commodity.evaluateSub);
   //后台登录

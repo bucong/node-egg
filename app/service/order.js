@@ -24,6 +24,7 @@ class OrderService extends Service {
   }
   async add(query) {
     let db = this.app.mysql;
+    // 下单
     let result = await db.insert('order', {
       userId: query.userId,
       times: query.times,
@@ -32,7 +33,14 @@ class OrderService extends Service {
       price: query.price,
       store: query.store
     });
-    if(result.affectedRows === 1){
+    // 更新销量
+    let list = JSON.parse(query.list);
+    let ids = [];
+    for(let item of list){
+      ids.push(item.id);
+    }
+    let saleResult = await db.query('update commodity set salesVolume = salesVolume + 1 where id in ('+ids.join(',')+')');
+    if(result.affectedRows === 1 && saleResult.affectedRows >= 1){
       return {
         code: 0,
         data: '添加成功',
@@ -117,6 +125,15 @@ class OrderService extends Service {
     });
     if(result.affectedRows === 1){
       return '完成订单成功';
+    }
+  }
+  async delete(query) {
+    let db = this.app.mysql;
+    let result = await db.delete('order', {
+      id: query.id
+    });
+    if(result.affectedRows === 1){
+      return '删除订单成功';
     }
   }
 }

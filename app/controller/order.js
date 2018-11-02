@@ -69,6 +69,16 @@ class OrderController extends Controller {
       msg: ''
     };
   }
+  async delete() {
+    let query = this.ctx.query;
+    console.log(query);
+    let res = await this.service.order.delete(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    };
+  }
 }
 
 module.exports = OrderController;
