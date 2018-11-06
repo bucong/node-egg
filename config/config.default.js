@@ -29,7 +29,7 @@ module.exports = appInfo => {
       enable: false,
       ignoreJSON: true
     },
-    domainWhiteList: ['http://localhost:8088', 'http://localhost:7456'], //白名单
+    domainWhiteList: ['http://localhost:8088', 'http://192.168.0.118:8088', 'http://47.100.51.191'], //白名单
   };
   
   config.cors = {

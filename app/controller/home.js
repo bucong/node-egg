@@ -8,7 +8,7 @@ const sendToWormhole = require('stream-wormhole');
 
 class HomeController extends Controller {
   async index() {
-    let title = "我是首页内容";
+    let title = "首页";
     await this.ctx.render('index',{
       title: title
     });

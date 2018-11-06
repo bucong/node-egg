@@ -34,5 +34,5 @@ module.exports = app => {
   //后台登录
   router.post('/api/admin/login', controller.admin.login);
 
-  router.get('*', controller.home.index); //配置vue页面
+  // router.get('*', controller.home.index); //配置vue页面
 };
