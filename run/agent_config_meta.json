@@ -87,6 +87,15 @@
       "connectionLimit": "/GitHub/node-egg/node_modules/egg-mysql/config/config.default.js"
     }
   },
+  "logrotator": {
+    "filesRotateBySize": "/GitHub/node-egg/config/config.default.js",
+    "maxFileSize": "/GitHub/node-egg/config/config.default.js",
+    "filesRotateByHour": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js"
+  },
   "session": {
     "maxAge": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
     "key": "/GitHub/node-egg/node_modules/egg-session/config/config.default.js",
@@ -136,15 +145,6 @@
       "consoleLevel": "/GitHub/node-egg/node_modules/egg-schedule/config/config.default.js",
       "file": "/GitHub/node-egg/node_modules/egg-schedule/config/config.default.js"
     }
-  },
-  "logrotator": {
-    "filesRotateByHour": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "hourDelimiter": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "filesRotateBySize": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxFileSize": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxFiles": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "rotateDuration": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js",
-    "maxDays": "/GitHub/node-egg/node_modules/egg-logrotator/config/config.default.js"
   },
   "static": {
     "prefix": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",

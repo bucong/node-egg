@@ -113,8 +113,10 @@
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
-      "filesRotateBySize": null,
-      "maxFileSize": 52428800,
+      "filesRotateBySize": [
+        "/Users/g/logs/egg/node-egg-web.log"
+      ],
+      "maxFileSize": 2147483648,
       "maxFiles": 10,
       "rotateDuration": 60000,
       "maxDays": 31
