@@ -45,7 +45,6 @@ class CommodityService extends Service {
   }
   async evaluate(query) {
     let db = this.app.mysql;
-
     let result = await db.query('select evaluate.*, user.name, user.figureurl from evaluate left join user on evaluate.userId = user.id where cId = ?', [query.id]);
     return result;
   }
