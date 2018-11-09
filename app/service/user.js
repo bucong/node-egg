@@ -88,6 +88,33 @@ class UserService extends Service {
       return res;
     }
   }
+  async getVerification(query) {
+    //生成短信验证码
+    let verificationCode = "";
+    let codeLength = 6;//验证码的长度
+    let random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);//随机数
+    for (let i = 0; i < codeLength; i++) {//循环操作
+      let index = Math.floor(Math.random() * 10);//取得随机数的索引（0~35）
+      verificationCode += random[index];//根据索引取得随机数加到code上
+    }
+    console.log('生成的随机验证码是：' + verificationCode);
+    let data = {
+      phone: query.mobile,
+      apikey: '3614234760a278548889410472dd3185',
+      tplId: '1',
+      content: '注册验证码:' + verificationCode + '，请勿泄露。如不是本人发送，请勿理睬！'
+    };
+    let verification = await this.ctx.curl('http://api.sodocloud.com/sms/send_msg',{
+      data: data
+    });
+    let result = verification.data.toString('utf8');
+    console.log(result);
+    return {
+      code: 0,
+      data: {},
+      msg: ''
+    };
+  }
 }
 
 module.exports = UserService;

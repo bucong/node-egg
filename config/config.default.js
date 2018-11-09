@@ -54,13 +54,5 @@ module.exports = appInfo => {
     agent: false,
   };
 
-  //日志配置
-  config.logrotator = {
-    filesRotateBySize: [
-      path.join(appInfo.root, 'logs', appInfo.name, 'node-egg-web.log'),
-    ],
-    maxFileSize: 2 * 1024 * 1024 * 1024,
-  };
-
   return config;
 };

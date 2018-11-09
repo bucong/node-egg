@@ -1,4 +1,7 @@
 'use strict';
+//七牛图片上传
+const qiniu = require("qiniu");
+
 const Controller = require('egg').Controller;
 //文件存储
 const fs = require('fs');
@@ -62,6 +65,22 @@ class HomeController extends Controller {
     this.ctx.body = {
       code: 0,
       data: res,
+      msg: ''
+    }
+  }
+  async qiniuToken() {
+    let accessKey = 'wGPq09wab5iqgw4M5N8vB1V4SiJYl0ZRk8plp8Yd';
+    let secretKey = 'JsmSR_MKA4pKwg__Q3gxB54H-Mxxk4c3pSNT77Dj';
+    let mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
+    let options = {
+      scope: 'images',
+    };
+    let putPolicy = new qiniu.rs.PutPolicy(options);
+    let uploadToken = putPolicy.uploadToken(mac);
+    console.log(uploadToken);
+    this.ctx.body = {
+      code: 0,
+      data: uploadToken,
       msg: ''
     }
   }

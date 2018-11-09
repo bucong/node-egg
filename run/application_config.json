@@ -101,6 +101,7 @@
         "/GitHub/node-egg/node_modules/egg-i18n/config/locales",
         "/GitHub/node-egg/node_modules/egg-watcher/config/locales",
         "/GitHub/node-egg/node_modules/egg-multipart/config/locales",
+        "/GitHub/node-egg/node_modules/egg-development/config/locales",
         "/GitHub/node-egg/node_modules/egg-schedule/config/locales",
         "/GitHub/node-egg/node_modules/egg-logrotator/config/locales",
         "/GitHub/node-egg/node_modules/egg-static/config/locales",
@@ -117,7 +118,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "default",
+      "type": "development",
       "eventSources": {
         "default": "/GitHub/node-egg/node_modules/egg-watcher/lib/event-sources/default",
         "development": "/GitHub/node-egg/node_modules/egg-watcher/lib/event-sources/development"
@@ -134,19 +135,24 @@
       "fileExtensions": [],
       "whitelist": null
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "/Users/g/logs/egg/egg-schedule.log"
+        "file": "/GitHub/node-egg/logs/egg/egg-schedule.log"
       }
     },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
-      "filesRotateBySize": [
-        "/Users/g/logs/egg/node-egg-web.log"
-      ],
-      "maxFileSize": 2147483648,
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
       "maxFiles": 10,
       "rotateDuration": 60000,
       "maxDays": 31
@@ -156,16 +162,15 @@
       "dir": "/GitHub/node-egg/app/public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
+      "buffer": false,
       "maxFiles": 1000,
-      "maxAge": 31536000,
       "files": "<LRU>"
     },
     "view": {
       "root": [
         "/GitHub/node-egg/app/view"
       ],
-      "cache": true,
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {
@@ -174,7 +179,7 @@
     },
     "ejs": {
       "root": "/GitHub/node-egg/app/view",
-      "cache": true,
+      "cache": false,
       "debug": false,
       "compileDebug": true,
       "delimiter": null,
@@ -199,7 +204,7 @@
         "database": "egg"
       }
     },
-    "env": "prod",
+    "env": "local",
     "name": "egg",
     "keys": "<String len: 22>",
     "proxy": false,
@@ -218,6 +223,7 @@
         "egg-mysql": "^3.0.0",
         "egg-scripts": "^2.5.0",
         "egg-view-ejs": "^2.0.0",
+        "qiniu": "^7.2.1",
         "stream-wormhole": "^1.1.0"
       },
       "devDependencies": {
@@ -288,19 +294,21 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/g/logs/egg",
+      "dir": "/GitHub/node-egg/logs/egg",
       "encoding": "utf8",
-      "env": "prod",
+      "env": "local",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": true,
+      "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "egg-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -338,7 +346,8 @@
       "overrideMethod",
       "session",
       "securities",
-      "i18n"
+      "i18n",
+      "eggLoaderTrace"
     ],
     "workerStartTimeout": 600000,
     "cluster": {
@@ -453,6 +462,21 @@
       "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
       "path": "/GitHub/node-egg/node_modules/egg-multipart",
       "version": "2.1.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/GitHub/node-egg/node_modules/egg/config/plugin.js",
+      "path": "/GitHub/node-egg/node_modules/egg-development",
+      "version": "2.4.1"
     },
     "schedule": {
       "enable": true,

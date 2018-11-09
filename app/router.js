@@ -11,8 +11,10 @@ module.exports = app => {
   router.get('/api/img/list', controller.home.imgList);
   router.get('/api/img/set', controller.home.imgSet);
   router.get('/api/img/moveSort', controller.home.imgMoveSort);
-  //前端页面
+  router.get('/api/qiniu/token', controller.home.qiniuToken);
+  //用户
   router.get('/api/user/login', controller.user.userLogin);
+  router.get('/api/user/getVerification', controller.user.getVerification);
   //菜品信息
   router.post('/api/commodity/add', controller.commodity.add);
   router.get('/api/commodity/list', controller.commodity.list);

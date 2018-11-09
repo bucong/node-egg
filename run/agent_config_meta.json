@@ -6,7 +6,7 @@
       ".html": "/GitHub/node-egg/config/config.default.js"
     },
     "root": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js",
-    "cache": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js",
+    "cache": "/GitHub/node-egg/node_modules/egg-view/config/config.local.js",
     "defaultExtension": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js",
     "defaultViewEngine": "/GitHub/node-egg/node_modules/egg-view/config/config.default.js"
   },
@@ -36,7 +36,7 @@
       "value": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
     },
     "hsts": {
-      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
+      "enable": "/GitHub/node-egg/node_modules/egg-security/config/config.local.js",
       "maxAge": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js",
       "includeSubdomains": "/GitHub/node-egg/node_modules/egg-security/config/config.default.js"
     },
@@ -123,7 +123,7 @@
     "cookieMaxAge": "/GitHub/node-egg/node_modules/egg-i18n/config/config.default.js"
   },
   "watcher": {
-    "type": "/GitHub/node-egg/node_modules/egg-watcher/config/config.default.js",
+    "type": "/GitHub/node-egg/node_modules/egg-watcher/config/config.local.js",
     "eventSources": {
       "default": "/GitHub/node-egg/node_modules/egg-watcher/config/config.default.js",
       "development": "/GitHub/node-egg/node_modules/egg-watcher/config/config.default.js"
@@ -140,6 +140,13 @@
     "fileExtensions": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js",
     "whitelist": "/GitHub/node-egg/node_modules/egg-multipart/config/config.default.js"
   },
+  "development": {
+    "watchDirs": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/GitHub/node-egg/node_modules/egg-development/config/config.default.js"
+  },
   "customLogger": {
     "scheduleLogger": {
       "consoleLevel": "/GitHub/node-egg/node_modules/egg-schedule/config/config.default.js",
@@ -151,13 +158,12 @@
     "dir": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
     "dynamic": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
     "preload": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
-    "buffer": "/GitHub/node-egg/node_modules/egg-static/config/config.prod.js",
-    "maxFiles": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
-    "maxAge": "/GitHub/node-egg/node_modules/egg-static/config/config.prod.js"
+    "buffer": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/GitHub/node-egg/node_modules/egg-static/config/config.default.js"
   },
   "ejs": {
     "root": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
-    "cache": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
+    "cache": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.local.js",
     "debug": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
     "compileDebug": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
     "delimiter": "/GitHub/node-egg/node_modules/egg-view-ejs/config/config.default.js",
@@ -181,6 +187,7 @@
       "egg-mysql": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg-scripts": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "egg-view-ejs": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+      "qiniu": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
       "stream-wormhole": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
@@ -262,7 +269,9 @@
     "coreLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "agentLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
     "errorLogName": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
-    "coreLogger": "/GitHub/node-egg/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/GitHub/node-egg/node_modules/egg/config/config.local.js"
+    },
     "allowDebugAtProd": "/GitHub/node-egg/node_modules/egg/config/config.default.js"
   },
   "httpclient": {

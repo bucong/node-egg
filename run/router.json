@@ -70,8 +70,34 @@
       "GET"
     ],
     "paramNames": [],
+    "path": "/api/qiniu/token",
+    "regexp": "/^\\/api\\/qiniu\\/token(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
     "path": "/api/user/login",
     "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/user/getVerification",
+    "regexp": "/^\\/api\\/user\\/getVerification(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

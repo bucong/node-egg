@@ -5,7 +5,6 @@ const Controller = require('egg').Controller;
 class OrderController extends Controller {
   async list() {
     let query = this.ctx.query;
-    this.ctx.coreLogger.info('请求数据：'+query);
     console.log(query);
     let res = await this.service.order.list(query);
     this.ctx.body = {
