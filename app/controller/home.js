@@ -13,7 +13,8 @@ class HomeController extends Controller {
   async index() {
     let title = "首页";
     await this.ctx.render('index',{
-      title: title
+      title: title,
+      systemTime: this.ctx.app.cache
     });
   }
   async uploadImg() {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>富文本上传图片</title>
+    <style>
+        #editer{
+            border: 1px solid #ccc; 
+            width: 400px;
+            height: 200px;
+            margin-bottom: 30px;
+        }
+        #editer img{
+            /* 需要图片换行的话，可以设置display:block; */
+            display: block;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="editer" contenteditable="true">
+        123456123456
+    </div>
+    <input type="file" name="file" id="uploadFile" onchange="uploadFile(event)"/>    
+</body>
+<script type="text/javascript" language="javascript">
+    var editer = document.getElementById('editer');
+    function uploadFile(e){
+        let file = e.target.files[0]; //需要上传到后台的图片
+        //上传后台，此处省略。。。。。。。。。。。
+        let filePath = 'http://qiniu.jnwtv.com/LC20180417174434604455636.jpg';
+        //filePath为后台返回的图片地址
+        editer.focus();
+        document.execCommand('InsertImage', false, filePath);
+    }
+</script>
+</html>
