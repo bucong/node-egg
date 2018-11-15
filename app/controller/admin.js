@@ -7,7 +7,6 @@ class AdminController extends Controller {
     let query = this.ctx.request.body;
     console.log(query);
     let res = await this.service.admin.adminLogin(query);
-    console.log(res);
     if(res.length > 0){
       this.ctx.body = {
         code: 0,

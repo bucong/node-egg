@@ -85,6 +85,24 @@ class HomeController extends Controller {
       msg: ''
     }
   }
+  async configInfo() {
+    let res = await this.service.home.configInfo();
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
+  async configSave() {
+    let query = this.ctx.request.body;
+    console.log(query);
+    let res = await this.service.home.configSave(query);
+    this.ctx.body = {
+      code: 0,
+      data: res,
+      msg: ''
+    }
+  }
 }
 
 module.exports = HomeController;

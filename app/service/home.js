@@ -66,6 +66,22 @@ class HomeService extends Service {
       }
     }
   }
+  async configInfo() {
+    let db = this.app.mysql;
+    let result = await db.select('config');
+    return result[0];
+  }
+  async configSave(query) {
+    let db = this.app.mysql;
+    let result = await db.update('config', {
+      imgURL: query.imgURL
+    }, {
+      where: {
+        id: 1
+      }
+    });
+    return '成功';
+  }
 }
 
 module.exports = HomeService;
