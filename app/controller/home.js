@@ -12,9 +12,11 @@ const sendToWormhole = require('stream-wormhole');
 class HomeController extends Controller {
   async index() {
     let title = "首页";
+    console.log(this.ctx.app.systemTime)
     await this.ctx.render('index',{
       title: title,
-      systemTime: this.ctx.app.systemTime
+      systemTime: this.ctx.app.systemTime,
+      imgURL: this.ctx.app.imgURL
     });
   }
   async uploadImg() {
@@ -70,11 +72,11 @@ class HomeController extends Controller {
     }
   }
   async qiniuToken() {
-    let accessKey = 'wGPq09wab5iqgw4M5N8vB1V4SiJYl0ZRk8plp8Yd';
-    let secretKey = 'JsmSR_MKA4pKwg__Q3gxB54H-Mxxk4c3pSNT77Dj';
+    let accessKey = 'dBFl65mOLbJvu4B1l162-KxCSBW9sKmYxS0B7-rA';
+    let secretKey = '1aBL4UZ36m2O4K5cdFIItBeWHUFEno--5qchGtqg';
     let mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
     let options = {
-      scope: 'images',
+      scope: 'mini-program-video',
     };
     let putPolicy = new qiniu.rs.PutPolicy(options);
     let uploadToken = putPolicy.uploadToken(mac);
