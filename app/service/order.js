@@ -83,9 +83,12 @@ class OrderService extends Service {
     let newList = [];
     for(let item of list){
       commodityMap[item.id].num = item.num;
-      newList.push(commodityMap[item.id]);
+      let commodityItem = commodityMap[item.id];
+      commodityItem.img = this.service.home.qiniuLink(commodityItem.img);
+      newList.push(commodityItem);
     }
     orderLine.list = newList;
+    console.log(orderLine);
     return orderLine;
   }
   async accept(query) {

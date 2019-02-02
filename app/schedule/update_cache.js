@@ -6,7 +6,8 @@ module.exports = {
     immediate: true, //启动立即执行
   },
   async task(ctx) {
-    let data = new Date();
+    let date = new Date();
+    let data = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
     ctx.app.systemTime = data;
   },
 };

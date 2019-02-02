@@ -13,7 +13,7 @@ module.exports = app => {
   router.get('/api/img/moveSort', controller.home.imgMoveSort);
   router.get('/api/qiniu/token', controller.home.qiniuToken);
   //配置信息
-  router.get('/api/config/info', controller.home.configInfo);
+  router.get('/api/config/info', controller.home.getConfigInfo);
   router.post('/api/config/save', controller.home.configSave);
   //用户
   router.get('/api/user/login', controller.user.userLogin);

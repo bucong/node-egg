@@ -11,13 +11,23 @@ const sendToWormhole = require('stream-wormhole');
 
 class HomeController extends Controller {
   async index() {
-    let title = "首页";
-    console.log(this.ctx.app.systemTime)
+    let title = "egg-api";
     await this.ctx.render('index',{
       title: title,
       systemTime: this.ctx.app.systemTime,
-      imgURL: this.ctx.app.imgURL
+      imgURL: this.ctx.app.imgURL,
+      address: "http://47.100.51.191:3000/api/"
     });
+  }
+  getConfigInfo(){
+    let configInfo = {
+      qiniuDomain: this.ctx.app.imgURL
+    };
+    this.ctx.body = {
+      code: 0,
+      data: configInfo,
+      msg: ''
+    }
   }
   async uploadImg() {
     const ctx = this.ctx;
@@ -84,14 +94,6 @@ class HomeController extends Controller {
     this.ctx.body = {
       code: 0,
       data: uploadToken,
-      msg: ''
-    }
-  }
-  async configInfo() {
-    let res = await this.service.home.configInfo();
-    this.ctx.body = {
-      code: 0,
-      data: res,
       msg: ''
     }
   }

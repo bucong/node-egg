@@ -3,6 +3,7 @@
 const Service = require('egg').Service;
 
 class HomeService extends Service {
+  // 首页展示图
   async imgList(query) {
     let db = this.app.mysql;
     let result = await db.select('imgs', {
@@ -11,8 +12,12 @@ class HomeService extends Service {
         ['sort', 'asc'] //排序
       ]
     });
+    for(let item of result){
+      item.img = this.service.home.qiniuLink(item.img);
+    }
     return result;
   }
+  // 修改首页展示图
   async imgSet(query) {
     let db = this.app.mysql;
     let result = await db.update('imgs', {
@@ -36,6 +41,7 @@ class HomeService extends Service {
       }
     }
   }
+  // 修改首页图片顺序
   async imgMoveSort(query) {
     let db = this.app.mysql;
     let result1 = await db.update('imgs', {
@@ -66,11 +72,7 @@ class HomeService extends Service {
       }
     }
   }
-  async configInfo() {
-    let db = this.app.mysql;
-    let result = await db.select('config');
-    return result[0];
-  }
+  // 修改配置信息，七牛域名
   async configSave(query) {
     let db = this.app.mysql;
     let result = await db.update('config', {
@@ -80,7 +82,12 @@ class HomeService extends Service {
         id: 1
       }
     });
+    this.ctx.app.imgURL = query.imgURL;
     return '成功';
+  }
+  qiniuLink(img) {
+    let url = this.ctx.app.imgURL + img;
+    return url;
   }
 }
 
