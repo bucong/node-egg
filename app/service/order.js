@@ -88,7 +88,6 @@ class OrderService extends Service {
       newList.push(commodityItem);
     }
     orderLine.list = newList;
-    console.log(orderLine);
     return orderLine;
   }
   async accept(query) {
