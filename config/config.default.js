@@ -8,7 +8,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1535608252642_8210';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = ['routerIn'];
 
   //配置ejs模板引擎，使用.html文件
   config.view = {
