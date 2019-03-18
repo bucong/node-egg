@@ -20,7 +20,7 @@ module.exports = appInfo => {
     listen: {
       path: '',
       port: 3000,
-      hostname: 'localhost',
+      hostname: '0.0.0.0',
     }
   };
 

@@ -107,6 +107,18 @@ class HomeController extends Controller {
       msg: ''
     }
   }
+  async test() {
+    let query = this.ctx.query;
+    console.log(query);
+    
+    this.ctx.body = {
+      code: 0,
+      data: {
+        info: '测试接口'
+      },
+      msg: ''
+    }
+  }
 }
 
 module.exports = HomeController;

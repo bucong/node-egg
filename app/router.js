@@ -40,4 +40,7 @@ module.exports = app => {
   router.post('/api/admin/login', controller.admin.login);
 
   // router.get('*', controller.home.index); //配置vue页面
+
+  // 测试
+  router.get('/api/test', controller.home.test);
 };
