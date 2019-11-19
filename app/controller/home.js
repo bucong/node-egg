@@ -119,6 +119,23 @@ class HomeController extends Controller {
       msg: ''
     }
   }
+  async wxlogin() {
+    let query = this.ctx.request.body;
+    console.log(query);
+    if (query.username == 'admin' && query.password == 'abc123') {
+      this.ctx.body = {
+        code: 0,
+        data: {},
+        msg: '登录成功'
+      }
+    } else {
+      this.ctx.body = {
+        code: -1,
+        data: {},
+        msg: '用户名或密码错误'
+      }
+    }
+  }
 }
 
 module.exports = HomeController;
