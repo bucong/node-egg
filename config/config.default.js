@@ -34,7 +34,7 @@ module.exports = appInfo => {
   };
   
   config.cors = {
-    // origin: '*', //允许所有跨域访问，关闭则允许白名单访问
+    origin: '*', //允许所有跨域访问，关闭则允许白名单访问
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
   

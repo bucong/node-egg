@@ -44,4 +44,6 @@ module.exports = app => {
   // 测试
   router.get('/api/test', controller.home.test);
   router.post('/api/wxlogin', controller.home.wxlogin);
+
+  router.get('/api/sendEmail', controller.home.sendEmail);
 };
